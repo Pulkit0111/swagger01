@@ -16,7 +16,7 @@ const options={
             title:"Learning Swagger for First time",
             version:"1.0.0"
         },
-        server:[
+        servers:[
             {
                 url: "https://localhost:8080"
             }
@@ -28,7 +28,7 @@ const options={
 //swagger specs
 const swaggerSpec=swaggerJsDoc(options)
 //build the UI
-app.use("/docs",swaggerUI.serve,swaggerUI.setup(swaggerSpec))
+app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerSpec))
 
 
 app.use("/users",userRouter)
